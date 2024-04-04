@@ -6,3 +6,4 @@ __pycache__/
 dist/
 build/
 venv/
+rp_cli/handlers/buttons_handler.py
