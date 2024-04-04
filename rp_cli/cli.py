@@ -3,12 +3,15 @@ import inquirer
 from .theme import custom_theme
 from .ascii_arts.intro_art import intro
 from .handlers.update_config_handler import handle_update_config
+from rp_cli.utils.display_message import display_message
+from rp_cli.utils.clear_screen import clear
 
 app = typer.Typer()
 
 @app.command()
 def cli():
-    while True:
+    clear()
+    while True:        
         typer.echo(intro())
         questions = [
             inquirer.List('action',
@@ -21,12 +24,13 @@ def cli():
             return
 
         if answers['action'] == 'Update Configuration':
+            clear()
             message = handle_update_config()
             if message:
                 typer.echo(message)
         elif answers['action'] == 'Exit':
-            typer.echo("Bye! 🚀👋")
+            display_message("Bye! 🚀👋", style="info")
             return
 
-if __name__ == "__cli__":
+if __name__ == "__main__":
     app()
