@@ -1,0 +1,22 @@
+[
+    {
+        "application_id": 123456789,
+        "state": "Sample State",
+        "details": "Sample Details",
+        "large_image": {
+            "key": "large_icon",
+            "text": "Large Image Text"
+        },
+        "small_image": {
+            "key": "small_icon",
+            "text": "Small Image Text"
+        },
+        "start_timestamp": 1712267360,
+        "buttons": [
+            {
+                "label": "Test Button",
+                "url": "https://example.com"
+            }
+        ]
+    }
+]
